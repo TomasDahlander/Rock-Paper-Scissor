@@ -1,4 +1,4 @@
-package sample;
+package rock_paper_scissor_sampler;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +13,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("rock_paper_scissor.fxml"));
         primaryStage.setTitle("Rock - Paper - Scissor");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
     public static void main(String[] args) {
