@@ -39,9 +39,9 @@ public class Controller {
     private void check(int player) throws InterruptedException {
         int npc = getNpcChoice();
         String npcChoice;
-        if(npc == 1) npcChoice = "rock.JPG";
-        else if(npc == 2) npcChoice = "scissor.JPG";
-        else npcChoice = "paper.JPG";
+        if(npc == 1) npcChoice = "Pictures/rock.JPG";
+        else if(npc == 2) npcChoice = "Pictures/scissor.JPG";
+        else npcChoice = "Pictures/paper.JPG";
         drumRoll(npcChoice);
 
         Task sleeper = new Task() {
@@ -75,11 +75,11 @@ public class Controller {
         new Thread(() -> {
             for (int i = 0; i < 6; i++) {
                 try {
-                    setNpcImage("rock.JPG");
+                    setNpcImage("Pictures/rock.JPG");
                     Thread.sleep(75);
-                    setNpcImage("paper.JPG");
+                    setNpcImage("Pictures/paper.JPG");
                     Thread.sleep(75);
-                    setNpcImage("scissor.JPG");
+                    setNpcImage("Pictures/scissor.JPG");
                     Thread.sleep(75);
                 } catch (InterruptedException e) {
                     System.out.println("Det gick ej att göra en drumroll.");
@@ -121,17 +121,17 @@ public class Controller {
         outcome.setText("");
         if(e.getSource() == rock){
             setButtonStatus(true);
-            setPlayerImage("rock.JPG");
+            setPlayerImage("Pictures/rock.JPG");
             check(1);
         }
         else if(e.getSource() == paper){
             setButtonStatus(true);
-            setPlayerImage("paper.JPG");
+            setPlayerImage("Pictures/paper.JPG");
             check(3);
         }
         else if(e.getSource() == scissor){
             setButtonStatus(true);
-            setPlayerImage("scissor.JPG");
+            setPlayerImage("Pictures/scissor.JPG");
             check(2);
         }
     }

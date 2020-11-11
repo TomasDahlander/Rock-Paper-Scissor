@@ -3,6 +3,6 @@ module sample {
     requires javafx.graphics;
     requires javafx.fxml;
 
-    opens sample;
-
+    opens rock_paper_scissor_sampler;
+    opens Pictures;
 }
